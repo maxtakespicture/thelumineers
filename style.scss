@@ -1,0 +1,526 @@
+/*
+Theme Name: Light It Up
+Author: Max le Roux
+Description: WordPress Theme for The Lumineers
+Version: 0.0.1
+Tags: bootstrap, whatupgirl
+*/
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("https://fonts.googleapis.com/css?family=Cedarville+Cursive|Josefin+Slab:100,300|Josefin+Sans:100,300,400,700");
+
+
+/*================================= SITE RESET ===============================*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain) */
+
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed,  
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+    /* HTML5 display-role reset for older browsers */
+    article, aside, details, figcaption, figure, 
+    footer, header, hgroup, menu, nav, section {
+        display: block;
+    }
+    body {
+        line-height: 1;
+    }
+    ol, ul {
+        list-style: none;
+    }
+    blockquote, q {
+        quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+}
+
+
+/*================================= COLUMNS =================================*/
+
+div[class^="col-"] {
+    float: left;
+}
+
+.col-d-1     {width: 8.33%;}
+.col-d-2     {width: 16.66%;} 
+.col-d-3     {width: 25%;}
+.col-d-4     {width: 33.33%;}
+.col-d-5     {width: 41.66%;}
+.col-d-6     {width: 50%;}
+.col-d-7     {width: 58.33%;}
+.col-d-8     {width: 66.66%;}
+.col-d-9     {width: 75%;}
+.col-d-10    {width: 83.33%;}
+.col-d-11    {width: 91.66%;}
+.col-d-12    {width: 100%;}
+
+.small {height: 1px;}
+.medium {height: 100px;}
+.large {height: 500px;}
+
+/*================================= VARIABLES ===============================*/
+
+
+$heading-font:  'Josefin Sans', sans-serif;
+$subtitle-font: 'Josefin Slab', serif;
+$accent-font:   'Cedarville Cursive', cursive;
+$body-font:     'Josefin Sans', sans-serif;
+
+$colour-1:  #c6e170;
+$colour-2:  #92c46d;
+$colour-3:  #297d7d;
+$colour-4:  #1c344e;
+$colour-5:  #7fb1b2;
+$colour-6:  #788595;
+
+$light-grey:    #dedede;
+$medium-grey:   #7e7e7e;
+$dark-grey:     #3b3b3b;
+
+
+/*================================= BASIC SITE STYLES =======================*/
+
+.clearfix {
+    display: block;
+    float: none;
+    clear: both;
+}
+
+.container {
+    width: 1366px;
+}
+
+body {
+    font-family: $body-font;
+    font-weight: 300;
+    font-size: 16px;
+    color: $dark-grey;
+}
+
+.horizontal {
+    height: 1px;
+    background-color: $light-grey;
+    margin: 20px 0;
+}
+
+h2 {
+    font-family: $subtitle-font;
+}
+
+h3 {
+    display: inline;
+    font-family: $heading-font;
+}
+
+h4 {
+    font-family: $accent-font;
+    font-size: 100px;
+    color: #fff;
+    transition: 0.2s all ease;
+}
+
+h5 {
+    font-family: $subtitle-font;
+    font-weight: 300;
+    font-size: 26px;
+    color: $colour-3;
+}
+
+h6 {
+    font-family: $accent-font;
+    color: $colour-5;
+    padding: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+small {
+    font-size: 10px;
+    padding-bottom: 10px;
+    display: block;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~ TOPBAR ~~~~~~~~~~~~~~~~~~~~~~*/
+
+.topbar {
+    background-color: $light-grey;
+    height: 40px;
+    h3 {
+        padding: 10px;
+        position: relative;
+        top: 13px;
+    }
+}
+
+.wrap{
+    width: 250px;
+    display: block;
+    position: absolute;
+    left: 300px;
+    top: 6px;
+}
+
+.search {
+    width: 100%;
+    position: relative
+}
+
+.searchTerm {
+    float: left;
+    width: 100%;
+    border: 1px solid $colour-2;
+    padding: 5px;
+    height: 15px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: $medium-grey;
+}
+
+.searchTerm:focus{
+    color: $colour-3;
+}
+
+.searchButton {
+  position: absolute;  
+  right: -48px;
+  width: 40px;
+  height: 27px;
+  border: 1px solid $colour-2;
+  background: $colour-2;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~ HEADER ~~~~~~~~~~~~~~~~~~~~~~*/
+
+header {
+    background-color: #fff;
+    .logo {
+        font-size: 66px;
+        font-family: $heading-font;
+        font-weight: 700;
+        text-align: center;
+        padding: 30px;
+        margin-top: 30px;
+    }
+    .subtitle {
+        text-align: center;
+        font-size: 20px;
+        padding-bottom: 30px;
+    }
+    
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~ NAVIGATION ~~~~~~~~~~~~~~~~~~*/
+
+nav {
+    text-align: center;
+    border-top: 1px solid $light-grey;
+    border-bottom: 1px solid $light-grey;
+    ul {
+        list-style: none;
+        padding: 20px;
+        li {
+            display: inline;
+            padding: 20px;
+            a {
+                color: $colour-4;
+                padding-top: 5px;
+                :hover {
+                    color: $colour-2;
+                }
+            }
+        }
+    }
+    
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~ BANNER ~~~~~~~~~~~~~~~~~~~~~~*/
+
+.banner {
+    background-image: url('../img/forest.jpg');
+    height: 600px;
+    text-align: center;
+    .bannertext {
+        padding-top: 160px;
+    }
+    h2 {
+        position: relative;
+        color: #fff;
+        font-size: 20px;
+        padding: 30px;
+    }
+    h4:hover {
+        color: $colour-1;
+        opacity: 0.8;
+        transition: 0.2s all ease;
+    }
+}
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~ CONTENT ~~~~~~~~~~~~~~~~~~~~~*/
+
+.container {
+    width: 1366px;
+    margin: 0 auto;
+    height: 500px;
+}
+
+/*~~~~~~~~~~~~~~~~ RECENT ~~~~~~~~~~~~~~~~*/
+
+.recent {
+    h5 {
+        padding: 20px 0;
+        margin-top: 30px;
+    }
+    h6 {
+        padding: 20px 0;
+        font-size: 2.5vw;
+    }
+    .art-recent {
+        float: left;
+        text-align: center;
+    }
+    .img-recent {
+        width: 99%;
+        padding: 20px 0;
+        transition: 0.2s all ease;
+    }
+    .img-recent:hover {
+        opacity: 0.8;
+        transition: 0.2s all ease;
+    }
+}
+
+/*~~~~~~~~~~~~~~~~ BLURB ~~~~~~~~~~~~~~~~*/
+
+.blurb {
+    h5 {
+        padding: 20px 0 20px 0;
+        margin-top: 30px;
+    }
+    p {
+        line-height: 1.5em;
+        text-align: justify;
+    }
+    .seemore {
+        text-align: right;
+        font-size: 14px;
+        a {
+            color: $colour-2;
+        }
+        a:hover {
+            color: $colour-6;
+        }
+    }
+}
+
+/*~~~~~~~~~~~~~~~~ PHOTOS ~~~~~~~~~~~~~~~~*/
+
+.photos {
+    margin-top: 30px;
+    h5 {
+        padding: 20px 0 20px 0;
+        margin-top: 30px;
+    }
+    .art-photos {
+        float: left;
+        text-align: center;
+    }
+    .img-photos {
+        width: 99%;
+        height: auto;
+        padding: 20px 0;
+        transition: 0.2s all ease;
+    }
+    .img-photos:hover {
+            opacity: 0.8;
+            transition: 0.2s all ease;
+    }
+    .seemore {
+        text-align: right;
+        font-size: 14px;
+        a {
+            color: $colour-2;
+        }
+        a:hover {
+            color: $colour-6;
+        }
+    }
+
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~ FOOTER ~~~~~~~~~~~~~~~~~~~~~~*/
+
+footer {
+    margin-top: 30px;
+    text-align: center;
+    background-color: $light-grey;
+    h5 {
+        color: $colour-4;
+        font-size: 25px;
+        font-weight: 300;
+        padding-top: 20px;
+    }
+    i {
+        color: $colour-5;
+        padding: 20px;
+        
+    }
+    i:hover {
+            color: $colour-2;
+    }
+}
+
+
+/*================================= QUERY ===================================*/
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~ Container fix ~~~~~~~~~~~~~~~~~~~~~~*/
+
+@media screen and (min-width: 0px) and (max-width: 1370px) {
+    
+    .only-d {
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    .recent h6 {
+        font-size: 3vw;
+    }
+    
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~ TABLET ~~~~~~~~~~~~~~~~~~~~~~*/
+
+@media screen and (min-width: 601px) and (max-width: 820px) {
+    
+    div[class^="col-"] {
+        float: left;
+    }
+  
+    .col-t-1    {width: 8.33%;}
+    .col-t-2    {width: 16.66%;}
+    .col-t-3    {width: 25%;}
+    .col-t-4    {width: 33.33%;}
+    .col-t-5    {width: 41.66%;}
+    .col-t-6    {width: 50%;}
+    .col-t-7    {width: 58.33%;}
+    .col-t-8    {width: 66.66%;}
+    .col-t-9    {width: 75%;}
+    .col-t-10   {width: 83.33%;}
+    .col-t-11   {width: 91.66%;}
+    .col-t-12   {width: 100%;}
+ 
+    .only-d {
+        width: 95%;
+        margin: 0 auto;
+    }
+    
+    .recent h6 {
+        font-size: 3vw;
+    }
+    
+    h5 {
+        font-size: 20px;
+    }
+    
+    body {
+        font-size: 12px;
+    }
+    
+    .banner {
+        height: 400px;
+        .bannertext {
+            padding-top: 60px;
+        }
+    }
+    
+    footer h5 {
+        font-size: 18px;
+    }
+
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~ MOBILE ~~~~~~~~~~~~~~~~~~~~~~*/
+
+@media screen and (min-width: 180px) and (max-width: 600px) {
+    
+    div[class^="col-"] {
+        float: left;
+    }
+    
+    .col-m-1    {width: 8.33%;}
+    .col-m-2    {width: 16.66%;}
+    .col-m-3    {width: 25%;}
+    .col-m-4    {width: 33.33%;}
+    .col-m-5    {width: 41.66%;}
+    .col-m-6    {width: 50%;}
+    .col-m-7    {width: 58.33%;}
+    .col-m-8    {width: 66.66%;}
+    .col-m-9    {width: 75%;}
+    .col-m-10   {width: 83.33%;}
+    .col-m-11   {width: 91.66%;}
+    .col-m-12   {width: 100%;}
+    
+    
+    .only-d {
+        width: 95%;
+        margin: 0 auto;
+    }
+    
+    .recent h6 {
+        font-size: 3vw;
+    }
+    
+    h5 {
+        font-size: 20px;
+    }
+    
+    body {
+        font-size: 12px;
+    }
+    
+    .banner {
+        height: 400px;
+        .bannertext {
+            padding-top: 60px;
+        }
+    }
+    
+    footer h5 {
+        font-size: 18px;
+    }
+
+}

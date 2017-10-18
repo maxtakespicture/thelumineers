@@ -29,7 +29,7 @@
 
     <!--~~~~~~~~~~~~~~~~~~~~~~STYLES~~~~~~~~~~~~~~~~~~~~~-->
 
-        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css?family=Cedarville+Cursive|Josefin+Slab:100,300|Josefin+Sans:100,300,400,700" rel="stylesheet">
         </head>
@@ -44,7 +44,8 @@
 
         <section class="topbar">
             <h3>LOG IN</h3>
-            <h3>SHOP</h3>
+            <h3><i class="fa fa-shopping-cart" aria-hidden="true"></i>
+SHOP</h3>
             <h3>OUR PARTNERS</h3>
             <div class="wrap">
                 <div class="search">
@@ -86,17 +87,32 @@
 
         <div class="container d-only">
             <section class="contact">
+                <div class="buffer medium col-d-12"></div>
+                <div class="col-d-6">
+                    <form>
+                    <h5>Drop us a message</h5><br>
+                      Name<br>
+                        <input type="text" name="firstname"><br>
+                        Contact number<br>
+                        <input type="text" name="lastname">
+                        Email<br>
+                        <input type="text" name="lastname">
+                        Message<br>
+                        <input type="text" name="lastname">
+                    </form>
+                    <div class="vertical"></div>
+                </div>
                 
-            <form>
-              Name<br>
-              <input type="text" name="firstname"><br>
-              Contact number<br>
-              <input type="text" name="lastname">
-              Email<br>
-              <input type="text" name="lastname">
-              Message<br>
-              <input type="text" name="lastname">
-            </form>
+                <div class="col-d-6">
+                    <article class="art-contact col-d-6">
+                        <h5>Get in touch</h5><br>
+                        <ul>
+                            <li><i class="fa fa-phone" aria-hidden="true"></i>555-774-2345</li>
+                            <li><i class="fa fa-envelope" aria-hidden="true"></i>info@thelumineers.com</li>
+                            <li><i class="fa fa-location-arrow" aria-hidden="true"></i>563 Magnolia Road, Denver, Colorado</li>
+                        </ul>
+                    </article>
+                </div>
             </section>
         </div>
 
